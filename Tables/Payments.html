@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dap Shopping - Payments</title>
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            background-color: #FFFFE0; /* Light Yellow background color */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            background-color: #FFA500; /* Orange */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Lobster', cursive;
+            color: #fff; /* White text color */
+            transition: transform 0.2s;
+        }
+
+        .header h1:hover {
+            transform: scale(1.1); /* Hover effect for text */
+        }
+
+        .navbar {
+            background-color: #333; /* Dark background color for the navigation bar */
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent; /* Underline effect */
+            transition: border-color 0.2s; /* Smooth transition for underline effect */
+        }
+
+        .navbar a:hover {
+            background-color: #555; /* Darker background color on hover */
+            border-color: #FFA500; /* Orange underline on hover */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333; /* Text color matching body color */
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: rgba(255, 255, 255, 0.5); /* Transparent white background for form inputs */
+        }
+
+        .form-group .btn-container {
+            text-align: center;
+        }
+
+        .form-group .btn-container button {
+            background: #FFA500; /* Orange */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: bold;
+        }
+
+        .form-group .btn-container button:hover {
+            background: #1E90FF; /* Royal Blue */
+        }
+
+        .footer {
+            background-color: #FFA500; /* Orange */
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dap Shopping</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="products.html">Products</a>
+        <!-- Add other navigation links as needed -->
+    </div>
+
+    <div class="container">
+        <h2>Payments Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="paymentID">Payment ID:</label>
+                <input type="text" id="paymentID" name="paymentID" required>
+            </div>
+            <div class="form-group">
+                <label for="orderID">Order ID:</label>
+                <input type="text" id="orderID" name="orderID" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentDate">Payment Date:</label>
+                <input type="date" id="paymentDate" name="paymentDate" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Payment Method:</label>
+                <input type="text" id="paymentMethod" name="paymentMethod" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentStatus">Payment Status:</label>
+                <select id="paymentStatus" name="paymentStatus" required>
+                    <option value="Paid">Paid</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Failed">Failed</option>
+                </select>
+            </div>
+            <div class="form-group btn-container">
+                <button type="button">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Dap Shopping
+    </div>
+</body>
+</html>

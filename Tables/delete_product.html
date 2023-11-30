@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dap Shopping - Delete Products</title>
+    <style>
+        body {
+            font-family: 'Lobster', cursive;
+            background-color: #FFFFE0; /* Light Yellow background color */
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .header {
+            background-color: #FFA500; /* Orange */
+            padding: 10px;
+            text-align: center;
+            position: relative; /* Added to position the login button */
+        }
+
+        .header h1 {
+            font-family: 'Lobster', cursive;
+            color: #fff; /* White text color */
+            transition: transform 0.2s;
+        }
+
+        .header h1:hover {
+            transform: scale(1.1); /* Hover effect for text */
+        }
+
+        .navbar-1 {
+            background-color: #333; /* Dark background color for the navigation bar */
+            overflow: hidden;
+            text-align: left; /* Align from left to right */
+        }
+
+        .navbar-1 a {
+            display: inline-block; /* Display links inline */
+            color: #fff; /* White text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-bottom: 2px solid transparent; /* Underline effect */
+            transition: border-color 0.2s; /* Smooth transition for underline effect */
+        }
+
+        .navbar-1 a:hover {
+            background-color: #555; /* Darker background color on hover */
+            border-color: #FFA500; /* Orange underline on hover */
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333; /* Text color matching body color */
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #FFA500; /* Orange border */
+            border-radius: 10px; /* Curvy edges */
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for form inputs */
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #FFA500; /* Orange border */
+            border-radius: 10px; /* Curvy edges */
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for form inputs */
+        }
+
+        .form-group .btn-container {
+            text-align: center;
+        }
+
+        .form-group .btn-container button {
+            background: #FFA500; /* Orange */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px; /* Curvy edges */
+            cursor: pointer;
+            transition: background-color 0.2s;
+            font-weight: bold;
+        }
+
+        .form-group .btn-container button:hover {
+            background: #1E90FF; /* Royal Blue */
+        }
+
+        .delete-button {
+            margin-right: 10px;
+        }
+
+        .footer {
+            background-color: #FFA500; /* Orange */
+            text-align: center;
+            padding: 10px; /* Increase padding for more space */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Dap Shopping</h1>
+        <a href="Login.html" class="login-button">Login/Signup</a>
+    </div>
+
+    <div class="navbar-1">
+        <a href="index.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="products.html">Products</a>
+        <!-- Add other navigation links as needed -->
+    </div>
+
+    <div class="container">
+        <h2>Modify/Delete Product</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="productID">Product ID:</label>
+                <input type="text" id="productID" name="productID" required>
+            </div>
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" name="productName">
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="stockQuantity">Stock Quantity:</label>
+                <input type="number" id="stockQuantity" name="stockQuantity">
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <select id="category" name="category">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Home Decor">Home Decor</option>
+                    <option value="Books">Books</option>
+                </select>
+            </div>
+            <div class="form-group btn-container">
+                <button class="delete-button" type="button">Delete</button>
+                <button type="button">Modify</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Dap Shopping
+    </div>
+</body>
+</html>
